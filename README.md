@@ -85,9 +85,10 @@ O projeto compara cenários como:
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/
-└── notebooks/
+└── exportacoes_varejo/  # gerada durante a execução
 ```
+
+Os arquivos CSV da pasta `exportacoes_varejo/` são resultados gerados pelo notebook e não precisam ser versionados.
 
 ## Como executar
 
@@ -130,12 +131,34 @@ Execute as células em sequência no arquivo `analise_previsao_demanda_varejo.ip
 
 O projeto utiliza dados sintéticos gerados no próprio notebook, salvos em `dados_sinteticos_varejo.csv`, o que facilita reprodução, estudo e apresentação em portfólio.
 
-## Resultados esperados
+## Resultados observados
+
+Na avaliação temporal realizada no notebook, usando os primeiros 80% dos dados para treinamento e os 20% finais para teste, o XGBoost apresentou o melhor desempenho no teste final dos dois canais:
+
+| Canal | Modelo | RMSE | MAE | R² |
+| --- | --- | ---: | ---: | ---: |
+| Loja física | XGBoost | 12,48 | 8,66 | 0,90 |
+| E-commerce | XGBoost | 6,72 | 5,17 | 0,91 |
+
+Na validação cruzada temporal, a Regressão Linear apresentou menor RMSE médio nos dois canais. Isso mostra que o modelo mais complexo não é necessariamente o mais estável, reforçando a importância de comparar teste final e validação.
+
+Na simulação dos últimos 90 dias, o modelo apresentou custo menor que o baseline histórico:
+
+| Canal | Custo do modelo | Custo do baseline | Diferença |
+| --- | ---: | ---: | ---: |
+| Loja física | R$ 43.272,00 | R$ 65.852,00 | R$ 22.580,00 |
+| E-commerce | R$ 31.853,00 | R$ 42.887,00 | R$ 11.034,00 |
+
+## Interpretação e limitações
+
+Os dados são sintéticos e foram criados especificamente para este projeto. Eles não representam uma empresa ou operação real. Os resultados servem para demonstrar o fluxo de análise e não devem ser usados diretamente para decisões comerciais.
+
+O modelo utiliza apenas variáveis disponíveis antes da venda, como clientes estimados, clima, promoção e sazonalidade. Ainda assim, a demanda foi simulada por regras artificiais. Em um cenário real, seria necessário validar o modelo com histórico de vendas, calendário comercial, preço, estoque e dados de campanhas.
 
 Com essa análise, é possível responder perguntas como:
 
 - quais fatores mais impactam a demanda;
-- qual modelo apresenta melhor desempenho;
+- qual modelo apresenta melhor desempenho em períodos futuros;
 - como a política de estoque afeta custo e disponibilidade;
 - quando a previsão entrega maior valor para a operação.
 
