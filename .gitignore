@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# Data and outputs
+*.csv
+*.xlsx
+*.parquet
+results/
+plots/
+
+# VS Code
+.vscode/
