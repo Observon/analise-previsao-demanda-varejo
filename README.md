@@ -81,7 +81,7 @@ O projeto compara cenários como:
 
 ```text
 .
-├── analise_previsao_demanda_varejo.ipynb
+├── previsao_demanda_varejo.ipynb
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -95,8 +95,8 @@ Os arquivos CSV da pasta `exportacoes_varejo/` são resultados gerados pelo note
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/observon/analise-previsao-demanda-varejo.git
-cd analise-previsao-demanda-varejo
+git clone
+cd previsao_demanda_varejo.ipynb
 ```
 
 ### 2. Crie um ambiente virtual
@@ -125,7 +125,7 @@ pip install -r requirements.txt
 
 ### 4. Abra o notebook
 
-Execute as células em sequência no arquivo `analise_previsao_demanda_varejo.ipynb`.
+Execute as células em sequência no arquivo `previsao_demanda_varejo.ipynb`.
 
 ## Dados
 
