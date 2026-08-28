@@ -1,4 +1,4 @@
-# Análise e Previsão de Demanda para Varejo
+# Análise e Previsão de Demanda no Varejo
 
 <div align="center">
 
@@ -95,7 +95,7 @@ Os arquivos CSV da pasta `exportacoes_varejo/` são resultados gerados pelo note
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/analise-previsao-demanda-varejo.git
+git clone https://github.com/observon/analise-previsao-demanda-varejo.git
 cd analise-previsao-demanda-varejo
 ```
 
@@ -177,6 +177,4 @@ Futuras evoluções úteis incluem:
 Este projeto foi desenvolvido para fins de estudo e apresentação em portfólio.
 
 ---
-
-Este repositório já está em um bom estágio para publicação no GitHub como projeto técnico de análise e previsão de demanda para varejo.
 
