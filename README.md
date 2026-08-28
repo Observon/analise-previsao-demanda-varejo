@@ -81,7 +81,7 @@ O projeto compara cenários como:
 
 ```text
 .
-├── modelos_preditivos_vilarejo.ipynb
+├── analise_previsao_demanda_varejo.ipynb
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -124,11 +124,11 @@ pip install -r requirements.txt
 
 ### 4. Abra o notebook
 
-Execute as células em sequência no arquivo `modelos_preditivos_vilarejo.ipynb`.
+Execute as células em sequência no arquivo `analise_previsao_demanda_varejo.ipynb`.
 
 ## Dados
 
-O projeto utiliza dados sintéticos gerados no próprio notebook, o que facilita reprodução, estudo e apresentação em portfólio.
+O projeto utiliza dados sintéticos gerados no próprio notebook, salvos em `dados_sinteticos_varejo.csv`, o que facilita reprodução, estudo e apresentação em portfólio.
 
 ## Resultados esperados
 
